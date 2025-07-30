@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Jordana Elizabeth Escalona Colivoro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <img src="img/logo_je.png" alt="Logo" class="profile-pic">
-        <h1>Jordana Elizabeth Escalona Colivoro</h1>
-        <p>Técnica Universitaria en Programación | Especialista en Python | Tutora</p>
-    
-        <nav>
-            <a href="#portfolio">Portafolio</a>
-            <a href="#game">Juego en Línea</a>
-        </nav>
+        <img src="img/logo_je_3.png" alt="Logo" class="logo-pic">
+
+        <p><strong>Especialista en Python | Técnica Informática | Tutora de python | Tutora de reparación de PC</strong> </p>
     </header>
+    <nav>
+        <a href="index.html" id="home"><i class="fas fa-home"></i></a>
+        <a href="#sobremi">Sobre mi</a>
+        <a href="#trabajo">Trabajo</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#game">Juego en Línea</a>
+    </nav>
     <div class="container">
         <section class="game-section">
             <h2>Hard Skills</h2>
-            <div class="tech-icons align-items-center">                
+            <div class="tech-icons align-items-center">
                 <span title="HTML5"><i class="fab fa-html5"></i></span>
                 <span title="CSS3"><i class="fab fa-css3-alt"></i></span>
                 <span title="JavaScript"><i class="fab fa-js"></i></span>
-                <span title="ReactJs"><i class="fab fa-react"></i></span>                
+                <span title="ReactJs"><i class="fab fa-react"></i></span>
+                <span title="Python"><i class="fab fa-python"></i></span>
+                <span title="Node.js"><i class="fab fa-node-js"></i></span>
+                <span title="Express"><i class="fas fa-server"></i></span>
+                <span title="Databases"><i class="fas fa-database"></i></span>
             </div>
         </section>
-        
+        <section id="sobremi">
+            <h2>Sobre mi</h2>
+            <p>Soy Técnica Universitaria en Programación y autodidacta.</p>
+            <p>Me apasiona estudiar,desarrollar y capacitarme constantemente en tecnologías que me permitan mejorar los
+                diversos proyectos web que desarrollo.</p>
+            <p>Mi principal fortaleza es la investigación para la resolución de problemas complejos.</p>
+
+            <p>Otra de mis pasiones además de realizar programas web, es la reparación y mantenimiento de PC's y
+                notebooks, actividad que realizo actualmente y cuanto además de contar con la certificación que avala mi
+                perfil
+                profesional como reparadora de PC.
+            </p>
+            <p>En mis tiempos libres le dedico tiempo a mi familia y amigos, ademas de realizar actividad fisica y por
+                supuesto mirar series y peliculas de mi interés.
+            </p>
+        </section>
+
         <section id="portfolio">
-            <h2>Portafolio</h2>
+            <h2>Portfolio</h2>
             <div class="portfolio-item">
                 <h3>Proyecto 1</h3>
                 <p>Descripción del proyecto 1.</p>
@@ -47,22 +72,24 @@
         <section id="game" class="game-section">
             <h2>Juego de las Ocho Reinas</h2>
             <p>Coloca ocho reinas en el tablero sin que ninguna pueda atacar a otra.</p>
+            <p>No puede haber dos reinas en la misma fila, columna ni diagonal.</p>
             <div class="chessboard" id="chessboard"></div>
         </section>
-        <div class="geometric-animals">
-            <img src="https://example.com/animal1.png" alt="Animal geométrico 1">
-            <img src="https://example.com/animal2.png" alt="Animal geométrico 2">
-            <img src="https://example.com/animal3.png" alt="Animal geométrico 3">
-        </div>
+
         <div class="bear">
             <div class="body"></div>
             <div class="head">
                 <div class="ear left"></div>
                 <div class="ear right"></div>
-                <div class="eye left"></div>
-                <div class="eye right"></div>
+                <div class="eye left">
+                    <div class="pupil"></div>
+                </div>
+                <div class="eye right">
+                    <div class="pupil"></div>
+                </div>
                 <div class="nose"></div>
                 <div class="mouth"></div>
+                <div class="mouth-line"></div>
             </div>
         </div>
     </div>
@@ -70,6 +97,7 @@
     <footer>
         &copy; 2024 Jordana Elizabeth Escalona Colivoro
     </footer>
-    
+
 </body>
+
 </html>
