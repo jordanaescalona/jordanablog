@@ -1,98 +1,182 @@
-html{
-    scroll-padding-top: 80px; /* iguala la altura del nav sticky */
+:root {
+  --color-1: #8A6DF1; /* color texto principal */
+  --color-2: #54D2BD; /* color destacado */
+  --color-3: #000000; /* fondo principal */
+  --color-4: #333333; /* fondo navbar */
 }
+
+html {
+  scroll-padding-top: 70px; /* altura nav sticky */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: #8A6DF1;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-3);
+  color: var(--color-1);
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #54D2BD;
-    color: #000000;
-    padding: 0px;
-    text-align: center;
-    padding-bottom: 5px;
-    
+  background-color: var(--color-2);
+  color: var(--color-3);
+  text-align: center;
+  padding: 20px 20px 5px;
 }
 
 header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 .logo-pic {
-    width: 50%;
-    margin: 30px 10px;
+  width: 50%;
+  margin: 30px 10px;
 }
 
-nav {
-    background-color: #333;
-    color: #8A6DF1;
-    padding: 20px 20px;
-    text-align: center;
-    margin-top: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;/* Opcional: asegura que quede encima */
+/* ---------- BOTÓN HAMBURGUESA sticky ---------- */
+.menu-toggle {
+  display: none;         /* solo visible en mobile */
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: var(--color-1);
+  cursor: pointer;
+  position: fixed;       /* sticky global */
+  top: 20px;
+  right: 20px;
+  z-index: 1200;         /* sobre nav */
 }
 
-nav a {
-    color: #54D2BD;
-    text-decoration: none;
-    margin: 0 10px;
-    display: inline-block; /* Necesario para que transform funcione bien */
-    transition: transform 0.3s ease;
+/* ---------- NAVBAR BASE STICKY (DESKTOP) ---------- */
+.navbar {
+  background: var(--color-4);
+  text-align: center;
+  padding: 20px;
+  position: sticky;      /* sticky para escritorio */
+  top: 0;
+  z-index: 1000;
 }
 
-nav a:hover {
+.navbar a {
+  color: var(--color-2);
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
   transform: scale(1.2);
 }
-#home{
-    color: #8A6DF1;
+
+#home {
+  color: var(--color-1);
 }
+
+/* ---------- NAVBAR RESPONSIVE FIX ---------- */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block; /* botón visible */
+    background-color: var(--color-4);
+    border-radius: 10%;
+  }
+
+  .navbar {
+    position: fixed;   
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: var(--color-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1100;
+    transform: translateX(100%);  /* OCULTO FUERA DE VISTA */
+    pointer-events: none;         /* No bloquea contenido */
+    opacity: 0;                   /* Invisible */
+  }
+
+  .navbar.open {
+    transform: translateX(0);     /* VISIBLE */
+    pointer-events: auto;         /* Activo */
+    opacity: 1;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+
+  .logo-pic {
+    width: 80%;
+  }
+}
+
+
+/* ---------- CONTENIDO ---------- */
 .container {
-    padding: 20px;
-    max-width: 100%;
-    box-sizing: border-box;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .portfolio-item {
-    background-color: #18181B;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0;
-    padding: 20px;
+  background-color: #18181B;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 20px;
 }
 
+/* ---------- FOOTER ---------- */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: var(--color-4);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-
-.game-section {
-    text-align: center;
-    margin: auto;
-    padding: 0;
-    max-width: 100%;
+/* ---------- HARD SKILLS ---------- */
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* Juego 8 reinas */
+.tech-icons i {
+  font-size: 8vmin;
+  color: var(--color-4);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.tech-icons i:hover {
+  color: var(--color-2);
+  transform: scale(1.2);
+}
+
+/* ---------- JUEGO 8 REINAS ---------- */
+.game-section{
+    text-align: center;
+}
 .chessboard {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   aspect-ratio: 1 / 1;
-  width: 90vw; /* 90% del viewport más pequeño */
+  width: 90vw;
   max-width: 400px;
   margin: 0 auto;
-  border: 2px solid #333;
+  border: 2px solid var(--color-4);
 }
 
 .chessboard div {
@@ -101,156 +185,125 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vmin; /* relativo al viewport */
+  font-size: 4vmin;
   cursor: pointer;
 }
 
-
 .chessboard .white {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .chessboard .black {
-    background-color: #000;
-    color: #fff;
+  background-color: #000;
+  color: #fff;
 }
 
 .queen {
-    color: #ffcc00;
+  color: #ffcc00;
 }
 
-/* Fin juego 8 reinas */
-
-/* Hard Skills */
-.tech-icons {
-    display: flex;
-    justify-content: center;   /* Centra horizontalmente */
-    align-items: center;   /* Centra verticalmente */
-    gap: 10px;    /* Espacio entre iconos */
-    flex-wrap: wrap; /* salto de linea */
-
-}
-
-.tech-icons i {
-    font-size: 8vmin;
-    color: #333;
-    transition: color 0.3s, transform 0.3s; /* Añade una transición suave */
-}
-
-.tech-icons i:hover {
-    color: #54D2BD;
-    /* Cambia el color al hacer hover */
-    transform: scale(1.2);
-    /* Aumenta el tamaño al hacer hover */
-}
-
-/* Oso geométrico */
+/* ---------- OSO ---------- */
 .bear {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 50px auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
 }
 
 .head {
-    width: 140px;
-    height: 140px;
-    background-color: #8B4513;
-    position: absolute;
-    top: 0;
-    left: 30px;
-    border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  background-color: #8B4513;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  border-radius: 50%;
 }
 
 .ear {
-    width: 50px;
-    height: 50px;
-    background-color: #8B4513;
-    position: absolute;
-    top: -15px;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #8B4513;
+  position: absolute;
+  top: -15px;
+  border-radius: 50%;
 }
 
 .ear.left {
-    left: 10px;
+  left: 10px;
 }
 
 .ear.right {
-    right: 10px;
+  right: 10px;
 }
 
 .eye {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    /* Para que la pupila no se salga del ojo */
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .eye.left {
-    left: 40px;
+  left: 40px;
 }
 
 .eye.right {
-    right: 40px;
+  right: 40px;
 }
 
-
 .pupil {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    transition: transform 0.3s ease;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: transform 0.3s ease;
 }
 
 .bear:hover .eye.left .pupil {
-    transform: translate(-5px, -5px);
+  transform: translate(-5px, -5px);
 }
 
 .bear:hover .eye.right .pupil {
-    transform: translate(5px, -5px);
+  transform: translate(5px, -5px);
 }
 
 .nose {
-    width: 30px;
-    height: 20px;
-    background-color: pink;
-    position: absolute;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50% 50% 0 0;
+  width: 30px;
+  height: 20px;
+  background-color: pink;
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0;
 }
 
 .mouth {
-    width: 60px;
-    height: 30px;
-    background-color: #8B4513;
-    position: absolute;
-    top: 105px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0 0 30px 30px;
-    border: 2px solid black;
-    border-top: none;
+  width: 60px;
+  height: 30px;
+  background-color: #8B4513;
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 30px 30px;
+  border: 2px solid black;
+  border-top: none;
 }
 
 .mouth-line {
-    width: 2px;
-    /* ancho de la línea */
-    height: 25px;
-    /* largo de la línea */
-    background-color: black;
-    position: absolute;
-    top: 110px;
-    /* empieza justo debajo de la nariz */
-    left: 50%;
-    transform: translateX(-50%);
+  width: 2px;
+  height: 25px;
+  background-color: black;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
 }
