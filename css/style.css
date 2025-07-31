@@ -161,7 +161,7 @@ footer {
 }
 
 .tech-icons i:hover {
-  color: var(--color-2);
+  color: var(--color-1);
   transform: scale(1.2);
 }
 
