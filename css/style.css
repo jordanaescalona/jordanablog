@@ -1,3 +1,6 @@
+html{
+    scroll-padding-top: 80px; /* iguala la altura del nav sticky */
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
@@ -50,7 +53,9 @@ nav a:hover {
     color: #8A6DF1;
 }
 .container {
-    padding: 50px 50px 0px;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .portfolio-item {
@@ -60,9 +65,7 @@ nav a:hover {
     margin: 10px 0;
     padding: 20px;
 }
-section{
-    padding: 60px 20px;
-}
+
 footer {
     background-color: #333;
     color: white;
@@ -76,7 +79,9 @@ footer {
 
 .game-section {
     text-align: center;
-    margin: 20px 0;
+    margin: auto;
+    padding: 0;
+    max-width: 100%;
 }
 
 /* Juego 8 reinas */
@@ -84,7 +89,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   aspect-ratio: 1 / 1;
-  width: 100%;
+  width: 90vw; /* 90% del viewport más pequeño */
   max-width: 400px;
   margin: 0 auto;
   border: 2px solid #333;
@@ -96,7 +101,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5vw; /* relativo al viewport */
+  font-size: 4vmin; /* relativo al viewport */
   cursor: pointer;
 }
 
@@ -119,19 +124,17 @@ footer {
 /* Hard Skills */
 .tech-icons {
     display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente */
-    gap: 20px;
-    /* Espacio entre iconos */
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;   /* Centra verticalmente */
+    gap: 10px;    /* Espacio entre iconos */
+    flex-wrap: wrap; /* salto de linea */
+
 }
 
 .tech-icons i {
-    font-size: 40px;
+    font-size: 8vmin;
     color: #333;
-    transition: color 0.3s, transform 0.3s;
-    /* Añade una transición suave */
+    transition: color 0.3s, transform 0.3s; /* Añade una transición suave */
 }
 
 .tech-icons i:hover {
