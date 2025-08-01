@@ -11,11 +11,26 @@
 </head>
 
 <body>
+    <h1 style="text-align: center;">
+        <span id="typed-text"></span>
+    </h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: ["Hola, soy Jordana...", "Técnica Universitaria en Programación.", "Bienvenid@ a mi web!!"," "],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true,
+            smartBackspace: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    </script>
     <header>
         <img src="img/logo_je_3.png" alt="Logo" class="logo-pic">
 
-        <p><strong>Especialista en Python | Técnica Informática | Tutora de python | Tutora de reparación de PC</strong>
-        </p>
+        <p><b>Especialista en Python | Técnica Informática | Tutora de python | Tutora de reparación de PC</b></p>
         <section class="skills">
             <div class="tech-icons align-items-center">
                 <span title="HTML5"><i class="fab fa-html5"></i></span>
@@ -41,7 +56,7 @@
         <a href="#game">Juego en Línea</a>
     </nav>
     <div class="container">
-        
+
         <section id="sobremi">
             <h2>Sobre mí</h2>
             <p>

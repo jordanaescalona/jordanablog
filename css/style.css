@@ -3,6 +3,7 @@
   --color-2: #54D2BD; /* color destacado */
   --color-3: #000000; /* fondo principal */
   --color-4: #333333; /* fondo navbar */
+  --color-5: #A18AF4; /*strong */
 }
 
 html {
@@ -27,7 +28,9 @@ header {
 header h1 {
   margin: 0;
 }
-
+strong{
+    color: var(--color-5);
+}
 .logo-pic {
   width: 50%;
   margin: 30px 10px;
@@ -67,12 +70,21 @@ header h1 {
 
 .navbar a:hover {
   transform: scale(1.2);
+  color: var(--color-1);
 }
 
 #home {
   color: var(--color-1);
 }
+#home:hover {
+    color: var(--color-2);
+}
 
+#typed-text {
+    text-align: center;
+    display: inline;
+    padding: 30px;
+}
 /* ---------- NAVBAR RESPONSIVE FIX ---------- */
 @media (max-width: 768px) {
 
