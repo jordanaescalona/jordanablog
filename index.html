@@ -8,25 +8,13 @@
     <title>Jordana Elizabeth Escalona Colivoro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- browser en Chrome -->
 </head>
 
 <body>
-    <h1 style="text-align: center;">
+    <h1 class="typed-wrapper">
         <span id="typed-text"></span>
     </h1>
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed('#typed-text', {
-            strings: ["Hola, soy Jordana...", "Técnica Universitaria en Programación.", "Bienvenid@ a mi web!!"," "],
-            typeSpeed: 50,
-            backSpeed: 25,
-            loop: true,
-            smartBackspace: true,
-            showCursor: true,
-            cursorChar: '|'
-        });
-    </script>
     <header>
         <img src="img/logo_je_3.png" alt="Logo" class="logo-pic">
 
@@ -137,7 +125,21 @@
     <footer>
         &copy; 2024 Jordana Elizabeth Escalona Colivoro
     </footer>
+
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('#typed-text', {
+            strings: ["Hola, soy Jordana...", "Técnica Universitaria en Programación.", "Bienvenid@ a mi web!!"," "],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true,
+            smartBackspace: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    </script>
 </body>
 
 </html>

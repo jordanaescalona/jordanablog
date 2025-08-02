@@ -85,9 +85,12 @@ strong{
     display: inline;
     padding: 30px;
 }
+.typed-wrapper{
+    text-align: center;
+    font-size: 3rem;
+}
 /* ---------- NAVBAR RESPONSIVE FIX ---------- */
 @media (max-width: 768px) {
-
   .menu-toggle {
     display: block; /* botón visible */
     background-color: var(--color-4);
@@ -128,6 +131,9 @@ strong{
   .logo-pic {
     width: 80%;
   }
+  .typed-wrapper {
+    font-size: 0.8rem;
+  }  
 }
 
 
