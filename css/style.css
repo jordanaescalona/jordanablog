@@ -89,6 +89,28 @@ strong{
     text-align: center;
     font-size: 3rem;
 }
+.sobremi-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sobremi-text {
+  flex: 1;
+  text-align: start;
+}
+
+.sobremi-img {
+  flex: 1;
+  text-align: right;
+}
+
+.sobremi-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 /* ---------- NAVBAR RESPONSIVE FIX ---------- */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -133,7 +155,20 @@ strong{
   }
   .typed-wrapper {
     font-size: 0.8rem;
-  }  
+  }
+  
+  .sobremi-flex {
+    flex-direction: column;
+  }
+
+  .sobremi-img {
+    order: 2; 
+    text-align: center;
+  }
+
+  .sobremi-text {
+    text-align: left;
+  }
 }
 
 

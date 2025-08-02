@@ -8,7 +8,9 @@
     <title>Jordana Elizabeth Escalona Colivoro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <!-- browser en Chrome -->
+    <!--AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
 </head>
 
 <body>
@@ -44,13 +46,13 @@
         <a href="#game">Juego en Línea</a>
     </nav>
     <div class="container">
-
-        <section id="sobremi">
-            <h2>Sobre mí</h2>
+        <section id="sobremi" class="sobremi-flex">
+            <div class="sobremi-text">
+            <h2 data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800">SOBRE MÍ</h2>
             <p>
                 Soy <strong>Técnica Universitaria en Programación</strong>, autodidacta y apasionada por la tecnología.
                 Me motiva estudiar y capacitarme constantemente para aplicar nuevas herramientas que impulsen la calidad
-                de los proyectos web que desarrollo.
+                de los proyectos que desarrollo.
             </p>
             <p>
                 Actualmente me desempeño como <strong>tutora</strong> de <strong>Reparación y Mantenimiento de
@@ -62,7 +64,7 @@
                 aplico
                 tanto en programación como en la reparación de equipos informáticos. Cuento con certificación
                 profesional
-                que respalda mi experiencia como técnica reparadora de PC’s y notebooks.
+                que respalda mi experiencia como técnica reparadora de PC's y notebooks.
             </p>
             <p>
                 Entre mis competencias técnicas se destacan:
@@ -78,11 +80,15 @@
                 <em>Estoy abierta a nuevos proyectos, colaboraciones y oportunidades de aprendizaje.
                     Si quieres trabajar conmigo o conocer más sobre mi trabajo, ¡no dudes en contactarme!</em>
             </p>
+            </div>
+            <div class="sobremi-img">
+                <img src="img/jor.png" alt="Jordana Escalona">
+            </div>
         </section>
 
 
         <section id="portfolio">
-            <h2>Portfolio</h2>
+            <h2 data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800">PORTFOLIO</h2>
             <div class="portfolio-item">
                 <h3>Proyecto 1</h3>
                 <p>Descripción del proyecto 1.</p>
@@ -97,7 +103,7 @@
             </div>
         </section>
         <section id="game" class="game-section">
-            <h2>Juego de las Ocho Reinas</h2>
+            <h2 data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="800">JUEGO DE LAS 8 REINAS</h2>
             <p>Coloca ocho reinas en el tablero sin que ninguna pueda atacar a otra.</p>
             <p>No puede haber dos reinas en la misma fila, columna ni diagonal.</p>
             <div class="chessboard" id="chessboard"></div>
@@ -128,10 +134,11 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typed = new Typed('#typed-text', {
-            strings: ["Hola, soy Jordana...", "Técnica Universitaria en Programación.", "Bienvenid@ a mi web!!"," "],
+            strings: ["Hola, soy Jordana...", "Técnica Universitaria en Programación.", "Bienvenid@ a mi web!!", " "],
             typeSpeed: 50,
             backSpeed: 25,
             loop: true,
@@ -139,6 +146,11 @@
             showCursor: true,
             cursorChar: '|'
         });
+    </script>
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
