@@ -1,0 +1,78 @@
+a{
+    text-decoration: none;
+    color:#fff;
+}
+.home {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
+}
+.section {
+    width: 100%;
+   /*  height: 100vh; */
+    display: flex;
+    text-align: justify;
+    color: #fff;
+}
+.section:nth-child(odd) {
+    background: #5DBAB2;
+}
+
+.section:nth-child(even) {
+    background: #D691AC;
+}
+
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+    background: #5DBAB2 !important
+}
+
+.nav-link{
+    color:black;
+}
+.nav-link:hover{
+    color:#D80C83 !important;
+}
+.navbar{
+    background-color:#FFE4F6 !important;
+}
+
+footer{
+    width: 100%;
+    color: #fff;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.autor{
+    color:#D691AC;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+/* Botón de whatsapp */
+.btn-wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color:#fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover{
+    text-decoration: none;
+    color:#0df053;
+    background: #fff;
+}
